@@ -4,11 +4,12 @@ import { AppRoute } from "../../exports/app-route-types";
 import { Offer } from "../../pages/offer/offer-page";
 import React from "react";
 import { Login } from "../../pages/login/login-page";
+import { OfferType } from "../../mocks/offer";
 
-export function PrivateRoutes({ isAuthorized }: { isAuthorized: boolean }) {
+export function PrivateRoutes({ isAuthorized, offers }: { isAuthorized: boolean; offers: OfferType[] }) {
     const privateRoutes = [
-        { path: AppRoute.Favourites, element: <Favorites /> },
-        { path: AppRoute.Offer, element: <Offer /> }
+        { path: AppRoute.Favourites, element: <Favorites offers={offers} /> },
+        { path: `${AppRoute.Offer}/:id`, element: <Offer /> } 
     ];
 
     return (

@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from './components/app/app';
 import { cardArray } from './components/placecard/access-place-card';
+import { offers } from './mocks/offer';
 
 
 const root = ReactDOM.createRoot(
@@ -11,7 +12,6 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <App availableCards={cardArray} />
+     <App availableCards={cardArray} offers={offers} />
   </React.StrictMode>
 );
-
