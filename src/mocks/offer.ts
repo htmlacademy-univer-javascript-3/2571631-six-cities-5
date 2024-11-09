@@ -3,6 +3,7 @@ export type OfferType = {
     title: string,
     type: string,
     previewImage: string,
+    description: string,
     city: {
         name: string,
         location: {
@@ -20,99 +21,179 @@ export type OfferType = {
     isFavorite: boolean,
     isPremium: boolean,
     rating: number,
-}
+    goods: string[],
+    bedrooms: number,
+    maxAdults: number,
+    host: {
+        isPro: boolean,
+        name: string,
+        avatarUrl: string
+    }
+};
 
 export const offers: OfferType[] = [
     {
-        id: "f6821b5e-8c4a-4a56-a17f-7e9e5c7b16d1",
-        title: "Modern Loft in City Center",
-        type: "apartment",
-        price: 320,
-        previewImage: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/92892144.jpg?k=0b3ae971f1059a215e185dccd5ebd709f9808d4a593cc8acbed6d685b9298b8d&o=&hp=1",
-        city: {
-            name: "Berlin",
-            location: {
-                latitude: 52.520008,
-                longitude: 13.404954,
-                zoom: 12
-            }
-        },
-        location: {
-            latitude: 52.530008,
-            longitude: 13.414954,
-            zoom: 15
-        },
-        isFavorite: true,
-        isPremium: true,
-        rating: 4.5
-    },
-    {
-        id: "a1b2c3d4-5678-9101-1121-314151617181",
-        title: "Cozy House by the Lake",
-        type: "house",
-        price: 450,
-        previewImage: "https://allaboutglamping.com/wp-content/uploads/2021/12/big-lakebig.jpg",
-        city: {
-            name: "Zurich",
-            location: {
-                latitude: 47.376886,
-                longitude: 8.541694,
-                zoom: 11
-            }
-        },
-        location: {
-            latitude: 47.380886,
-            longitude: 8.551694,
-            zoom: 14
-        },
-        isFavorite: false,
-        isPremium: true,
-        rating: 4.7
-    },
-    {
-        id: "99887766-5544-3322-1100-112233445566",
-        title: "Charming Cottage Escape",
-        type: "cottage",
-        price: 180,
-        previewImage: "https://i.pinimg.com/originals/c9/ca/a9/c9caa95ce3227d9e8c21b78df32f790d.jpg",
+        id: "337fc635-709d-4c54-9fed-3a20f68f67ef",
+        title: "Penthouse with 4-5 Rooms and 5 Balconies",
+        type: "room",
+        previewImage: "https://14.design.htmlacademy.pro/static/hotel/10.jpg",
+        description: "A spacious, modern villa with all amenities and a jacuzzi, all on one floor with beautiful views.",
         city: {
             name: "Amsterdam",
             location: {
-                latitude: 52.3676,
-                longitude: 4.9041,
-                zoom: 10
+                latitude: 52.37454,
+                longitude: 4.897976,
+                zoom: 13
             }
         },
         location: {
-            latitude: 52.3776,
-            longitude: 4.9141,
-            zoom: 13
+            latitude: 52.3909553943508,
+            longitude: 4.85309666406198,
+            zoom: 16
         },
-        isFavorite: true,
-        isPremium: false,
-        rating: 3.9
-    },
-    {
-        id: "4e3f2g1h-5i6j-7k8l-9m0n-o1p2q3r4s5t6",
-        title: "Luxury Suite with Ocean View",
-        type: "hotel",
-        price: 600,
-        previewImage: "https://i.pinimg.com/736x/e0/18/5d/e0185d72514d17cb3929f6a4d3b3f7c3.jpg",
-        city: {
-            name: "Barcelona",
-            location: {
-                latitude: 41.3851,
-                longitude: 2.1734,
-                zoom: 12
-            }
-        },
-        location: {
-            latitude: 41.3901,
-            longitude: 2.1804,
-            zoom: 15
-        },
+        price: 248,
         isFavorite: false,
         isPremium: true,
-        rating: 4.8
+        rating: 1.6,
+        goods: [
+            "Heating",
+            "Coffee machine",
+            "Breakfast",
+            "Dishwasher",
+            "Kitchen",
+            "Baby seat",
+            "Fridge"
+        ],
+        bedrooms: 1,
+        maxAdults: 1,
+        host: {
+            isPro: true,
+            name: "Angelina",
+            avatarUrl: "https://14.design.htmlacademy.pro/static/host/avatar-angelina.jpg"
+        }
+    },
+    {
+        id: "fb768e57-b767-41a2-909f-f950f2fd6855",
+        title: "Loft Studio in the City Center",
+        type: "room",
+        previewImage: "https://14.design.htmlacademy.pro/static/hotel/10.jpg",
+        description: "A peaceful studio located in the most popular part of town. Quiet building close to everything.",
+        city: {
+            name: "Amsterdam",
+            location: {
+                latitude: 52.37454,
+                longitude: 4.897976,
+                zoom: 13
+            }
+        },
+        location: {
+            latitude: 52.3609553943508,
+            longitude: 4.85309666406198,
+            zoom: 16
+        },
+        price: 118,
+        isFavorite: false,
+        isPremium: false,
+        rating: 1.7,
+        goods: [
+            "Washing machine",
+            "Wi-Fi",
+            "Baby seat",
+            "Fridge",
+            "Laptop friendly workspace",
+            "Towels",
+            "Air conditioning"
+        ],
+        bedrooms: 1,
+        maxAdults: 1,
+        host: {
+            isPro: true,
+            name: "Angelina",
+            avatarUrl: "https://14.design.htmlacademy.pro/static/host/avatar-angelina.jpg"
+        }
+    },
+    {
+        id: "6fb62ba1-b15e-4022-a1fc-90d3872e1d32",
+        title: "Tile House",
+        type: "house",
+        previewImage: "https://14.design.htmlacademy.pro/static/hotel/3.jpg",
+        description: "Designer interior in a charming neighborhood. Completely renovated, well-equipped, and cozy studio in a 100-year-old wooden house.",
+        city: {
+            name: "Amsterdam",
+            location: {
+                latitude: 52.37454,
+                longitude: 4.897976,
+                zoom: 13
+            }
+        },
+        location: {
+            latitude: 52.3909553943508,
+            longitude: 4.929309666406198,
+            zoom: 16
+        },
+        price: 474,
+        isFavorite: false,
+        isPremium: false,
+        rating: 1.8,
+        goods: [
+            "Kitchen",
+            "Air conditioning",
+            "Laptop friendly workspace",
+            "Breakfast",
+            "Wi-Fi",
+            "Fridge",
+            "Heating",
+            "Dishwasher",
+            "Cable TV"
+        ],
+        bedrooms: 4,
+        maxAdults: 7,
+        host: {
+            isPro: true,
+            name: "Angelina",
+            avatarUrl: "https://14.design.htmlacademy.pro/static/host/avatar-angelina.jpg"
+        }
+    },
+    {
+        id: "2a31dd82-5ae8-465e-b836-55fad5c9b75b",
+        title: "Beautiful & Luxurious Apartment in a Prime Location",
+        type: "apartment",
+        previewImage: "https://14.design.htmlacademy.pro/static/hotel/2.jpg",
+        description: "A bright, sunny apartment just a 7-minute walk from the metro station. Spacious living room with a kitchen, one bedroom, a bathroom with a bathtub, and a summer terrace.",
+        city: {
+            name: "Amsterdam",
+            location: {
+                latitude: 52.37454,
+                longitude: 4.897976,
+                zoom: 13
+            }
+        },
+        location: {
+            latitude: 52.3809553943508,
+            longitude: 4.939309666406198,
+            zoom: 16
+        },
+        price: 177,
+        isFavorite: false,
+        isPremium: true,
+        rating: 3.4,
+        goods: [
+            "Laptop friendly workspace",
+            "Washing machine",
+            "Dishwasher",
+            "Wi-Fi",
+            "Coffee machine",
+            "Breakfast",
+            "Fridge",
+            "Air conditioning",
+            "Baby seat"
+        ],
+        bedrooms: 5,
+        maxAdults: 9,
+        host: {
+            isPro: true,
+            name: "Angelina",
+            avatarUrl: "https://14.design.htmlacademy.pro/static/host/avatar-angelina.jpg"
+        }
     }
-]
+];

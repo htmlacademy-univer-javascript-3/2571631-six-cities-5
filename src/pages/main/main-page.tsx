@@ -1,6 +1,7 @@
 import { OfferType } from "../../mocks/offer";
 import { PlaceCard } from "../../components/placecard/place-card";
 import { OfferList } from "../../components/list-of-offers/list-of-offers";
+import Map from "../../components/map/map";
 
 type SimpleCard = {
     isPremium: boolean;
@@ -112,7 +113,7 @@ export function MainPage({ availableCards, offers }: MainPageProps) {
                 </div>
                 </section>
                 <div className="cities__right-section">
-                <section className="cities__map map"></section>
+                    <Map city={offers[0].city} offers={offers}/>
                 </div>
             </div>
             </div>
