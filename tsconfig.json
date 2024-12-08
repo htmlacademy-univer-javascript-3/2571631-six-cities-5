@@ -5,6 +5,16 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "types": ["vitest/globals", "@testing-library/jest-dom"],
+    "baseUrl": "./",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@mocks/*": ["src/mocks/*"],
+      "@pages/*": ["src/pages/*"],
+      "@store/*": ["src/store/*"],
+      "@appTypes/*": ["src/appTypes/*"],
+      "@const": ["src/constants"]
+    },
 
     /* Bundler mode */
     "moduleResolution": "bundler",
