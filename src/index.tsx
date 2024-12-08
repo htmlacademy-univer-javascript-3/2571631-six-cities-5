@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { App } from './components/app/app';
-import { cardArray } from './components/placecard/access-place-card';
-import { offers } from './mocks/offer';
-
+import { App } from '@components/app';
+import { Provider } from 'react-redux';
+import { store } from '@store/index';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
-
 root.render(
   <React.StrictMode>
-     <App availableCards={cardArray} offers={offers} />
+    <Provider store={store}>
+      <App/>
+    </Provider>
   </React.StrictMode>
 );
